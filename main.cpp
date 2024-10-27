@@ -46,6 +46,15 @@ int main() {
     for (auto val : trip)
         cout << "\t" << val.get_name() << endl;
 
+    auto iter = trip.begin();
+    iter++; // iter should be equal to 1, meaning the second index
+    iter++; // iter now equal to 2, meaning the third index
+    trip.erase(iter);
+    cout << endl << endl;
+    for (auto val: trip)
+        cout << "\t" << val.get_name() << endl;
+
+
     return 0;
 }
 
